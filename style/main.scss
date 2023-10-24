@@ -1,0 +1,406 @@
+$Primary: #FFFFFF;
+$Primary_1: #2F2E30;
+$Button: #000000;
+$Button_1: #00FF66;
+$Button_2: #DB4444;
+$Hover_Button: #E07575;
+$Secondary: #F5F5F5;
+$Secondary_2: #DB4444;
+$Text: #FAFAFA;
+$Text_2: #000000;
+
+
+
+.main{
+    font-family: Poppins;
+
+    &__content{
+        
+        //=========================== FARME 1 HOME =========================== 
+        &--farme_1{
+            height: auto;
+
+            &--nav{
+                padding-top: 40px;
+                border-right: 1px solid $Button;
+
+                & > ul{
+
+                    & > li{
+                        list-style: none;
+                        margin-bottom: 16px;
+                        @include styleText(16px, 400, 24px);
+
+                        & > a{
+                            color: unset;
+                            text-decoration: none;
+                            
+                            @include flexBox(center, space-between);
+
+                            & > span{
+                                height: 24px;
+                                width: 24px;
+                            }
+                        }   
+                        
+                    }
+                }
+            }
+
+            &--banner{
+                padding-top: 40px;
+                padding-left: 35px;
+
+                & > img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+
+
+        //=========================== TODAY SALES HOME =========================== 
+        &--salesToday, 
+        &--category, 
+        &--betsSell, 
+        &--ourPrd,
+        &--banner-3{
+            margin-top: 140px;
+            border-bottom: 1px solid $Button;
+
+            & > .title_1{
+                @include flexBox(center, normal);
+
+                & > p{
+                    margin-left: 16px;
+                    color: $Button_2;
+                    @include styleText(16px, 600, 20px)
+                }
+            }
+
+            & > .title_2{
+                margin-top: 24px;
+                position: relative;
+
+                & > h2{
+                    font-family: Inter;
+                    letter-spacing: 1.44px;
+                    @include styleText(36px, 600, 48px);
+                }
+
+                & > .timeSales{
+                    display: flex;
+
+                    & > .timeItems{
+                        margin: 0 38px 0 0;
+                        text-align: center;
+
+                        & > span{
+                            @include styleText(12px, 500, 18px);
+                            padding-bottom: 4px;
+                        }
+                        & > p{
+                            height: 28px;
+                            width: 46px;
+                            font-family: Inter;
+                            
+                            @include styleText(32px, 700, 30px);
+                        }
+
+                        & > .crick{
+                            display: block;
+                        }
+                    }
+                }
+
+                & > .direct{
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    @include flexBox(center, unset);
+
+                    & > .direct-items{
+                        margin-left: 10px;
+                        cursor: pointer;
+
+                        & > .img{
+                            padding: 10px;
+                            border-radius: 50%;
+                            margin-left: 10px;
+                            background-color: $Secondary;
+                            cursor: pointer;
+                        }
+                    } 
+                }
+            }
+
+            & > .listPrd{
+                height: 390px;
+                margin-top: 40px;
+                overflow: hidden;
+                position: relative;
+
+                & > .listItems{
+                    height: auto;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    flex-wrap: nowrap;
+                    flex-shrink: 1;
+                    transition: .15s;
+
+                    & > .items{
+                        height: 350px;
+                        margin-bottom: 40px;
+                        
+
+
+                        & > .imgPrd{
+                            height: 250px;
+                            width: 100%;
+                            position: relative;
+                            overflow: hidden;
+                            background-color: $Secondary;
+
+
+                            & > img{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+
+                            .sales{
+                                position: absolute;
+                                top: 12px;
+                                left: 12px;
+                                border-radius: 4px;
+                                @include button-sale(unset, $Button_2, $Text);
+                            }
+                            .more{
+                                position: absolute;
+                                top: 12px;
+                                right: 12px;
+
+                                & > svg{
+                                    height: 34px;
+                                    width: 34px;
+                                    padding: 5px;
+                                    margin-bottom: 8px;
+                                    border-radius: 50%;
+                                    background-color: $Secondary;
+                                }
+                            }
+
+                            & > .addCart{
+                                position: absolute;
+                                bottom: -40px;
+                                left: 0;
+                                height: auto;
+                                width: 100%;
+                                text-align: center;
+                                padding: 8px 0;
+                                color: $Text;
+                                background-color: $Button;
+                                @include styleText(16px, 500, 24px);
+                                cursor: pointer;
+                                transition: all ease-in .15s;
+                            }
+
+
+                        }
+
+                        & > .inforPrd{
+                            margin-top: 16px;
+
+                            & > h4{
+                                @include styleText(16px, 500, 24px);
+                            }
+
+                            & > .price{
+                                margin: 8px 0;
+                                @include flexBox(center, unset);
+                                @include styleText(16px, 500, 24px);
+
+                                & > p{
+                                    color: $Button_2;
+                                    margin-right: 12px;
+                                }
+
+                                & > span{
+                                    color: $Primary_1;
+                                    text-decoration: line-through;
+                                }
+                            }
+
+                            & > .starRate{
+                                @include flexBox(center, unset);
+
+                                & > p{
+                                    margin-left: 8px;
+                                    color: $Primary_1;
+                                    @include styleText(14px, 600, 21px);
+                                }
+                            }
+                        }
+
+
+
+                        &:hover .addCart{
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            & > .viewAll{
+                @include flexBox(center, center);
+                margin: 60px 0;
+                & > button{
+                    @include button(unset, $Button_2, $Text);
+                }
+            }
+        }
+
+
+
+        //=========================== CATEGORY HOME =========================== 
+        &--category{
+
+            & > .listCate{
+
+                
+                & > .listCate--Items{
+                    margin-top: 60px;
+                    margin-bottom: 70px;
+                    
+                    & > .itemsCate{
+
+                        & > .itemsCateCont{
+                            text-align: center;
+                            padding: 25px 0;
+                            border: 1px solid $Button;
+                            border-radius: 4px;
+                            transition: all ease .15s;
+
+                            & > p{
+                                margin-top: 16px;
+                            }
+
+                            &:hover{
+                                background-color: $Button_2;
+                                color: $Text;
+                                cursor: pointer;
+                            }
+                        }
+
+                        
+                        
+                    }
+                }
+            }
+        }
+
+
+
+        //=========================== BEST SELLING HOME =========================== 
+        &--betsSell{
+            border-bottom: unset;
+            .button{
+                @include button(unset, $Button_2, $Text);
+            }
+
+        }
+
+
+
+        //=========================== BANNER 2 HOME =========================== 
+        &--banner-2{
+            height: 500px;
+            width: 100%;
+            margin: 140px  0 70px 0;
+            
+            & > img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+
+
+        //=========================== OUR PRODUCT HOME =========================== 
+        &--ourPrd{
+            border-bottom: unset;
+            & > .listPrd{
+                height: 820px;
+
+                & > .listItems{
+                    flex-wrap: wrap;
+
+                    & > .items{
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+        }
+
+
+
+        //=========================== BANNER 3 HOME =========================== 
+        &--banner-3{
+            border-bottom: none;
+            & > .bannerCont{
+                height: 600px;
+                margin-top: 60px;
+
+                & > .bannerCont__left{
+                    height: 100%;
+
+                    & > img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+
+                & > .bannerCont__right{
+                    height: 100%;
+                    
+                    & > .topBanner{
+                        height: 50%;
+                        width: 100%;
+
+                        & > img{
+                            height: 100%;
+                            width: 100%;
+                            padding-bottom: 16px;
+                        }
+                    }
+
+                    & > .bottomBanner{
+                        height: 50%;
+
+                        &  > .itembn{
+                            height: 100%;
+
+                            & > img{
+                                height: 100%;
+                                width: 100%;
+                                padding-top: 16px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+    }
+}
+
+

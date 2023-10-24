@@ -1,0 +1,313 @@
+$Primary: #FFFFFF;
+$Primary_1: #2F2E30;
+$Button: #000000;
+$Button_1: #00FF66;
+$Button_2: #DB4444;
+$Hover_Button: #E07575;
+$Secondary: #F5F5F5;
+$Secondary_2: #DB4444;
+$Text: #FAFAFA;
+$Text_2: #000000;
+
+
+.header{
+    height: auto;
+    font-family: Poppins;
+
+    // ==================== HEADER TOP ==================== //
+    &--top{
+        background-color: $Button;
+        color: $Text;
+
+        &__content{
+            height: 100%;
+            position: relative;
+
+            & > .title{
+                height: 100%;
+                width: 100%;
+                padding: 12px 0;
+
+                @include styleText(14px, 400, 21px);
+                @include flexBox(center, center);
+
+                & > span{
+                    margin-left: 8px;
+                    @include styleText(14px, 600, 24px);
+
+                    & > a{
+                        color: unset;
+                    }
+                }
+            }
+
+            & > .language{
+                position: absolute;
+                top: 50%;
+                right: 0;
+                z-index: 999;
+                transform: translateY(-50%);
+
+
+                
+
+                & > .language__english{
+                    @include flexBox(center, unset);
+                    @include styleText(14px, 400, 21px);
+                    
+                    cursor: pointer;
+
+                    & > .language__vietnamese{
+                        position: absolute;
+                        top: 30px;
+                        right: 0;
+                        padding: 10px 0;
+                        border-radius: 4px;
+                        background-color: $Button;
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: all ease .2s;
+                        @include styleText(14px, 400, 21px);
+                        cursor: pointer;
+
+                        & > p{
+                            padding: 8px 24px;
+                            transition: all ease .2s;
+
+                            &:hover{
+                                background-color: $Primary_1
+                            }
+                        }
+                    }
+
+                    &:hover > .language__vietnamese{
+                        top: 21px;
+                        opacity: 1;
+                        visibility: visible;
+
+                    }
+                }
+                
+                
+                
+            }
+        }
+    }
+
+    // ==================== HEADER MIDDLE ==================== //
+    &--middle{
+        background-color: $Primary;
+        color: $Text_2;
+        border-bottom: 1px solid $Button;
+        &__content{
+            height: auto;
+            padding: 48px 0 16px 0;
+            
+            & > .logo{
+                height: 24px;
+                width: auto;
+
+                & > img{
+                    height: 100%;
+                    width: fit-content;
+                }
+            }
+
+            & > .menu{
+
+                & > ul{
+                    height: 100%;
+                    width: 100%;
+
+                    @include flexBox(center, normal);
+                    @include styleText(16px, 400, 24px);
+
+                    & > li{
+                        list-style: none;
+                        margin: 0 24px;
+                        position: relative;
+
+                        &:hover::before{
+                            bottom: 0;
+                            opacity: 1;
+                            visibility: visible;
+                        }
+
+                        &::before{
+                            content: "";
+                            position: absolute;
+                            bottom: -10px;
+                            left: 0;
+                            height: 1px;
+                            width: 100%;
+                            background-color: $Button;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all ease .2s;
+                        }
+
+                        & > a{
+                            color: unset;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+
+            & > .more{
+                @include flexBox(center, space-between);
+
+                & > .search{
+                    height: 38px;   
+                    padding: 7px 12px 7px 20px;
+                    margin-right: 16px;
+                    background-color: $Secondary;
+                    border-radius: 4px;
+                    @include flexBox(center, normal);
+
+                    & > input{
+                        border: none;
+                        outline: none;
+                        margin-right: 34px;
+                        color: $Text_2;
+                        background-color: unset;
+                        @include styleText(12px, 400px, 18px);
+                    }
+
+                    & > button{
+                        border: none;
+                        outline: none;
+                        height: 24px;
+                        width: 24px;
+                        padding: 0;
+                        background-color: unset;
+                        cursor: pointer;
+                    }
+                }
+
+                & > .more__infor{
+                    @include flexBox(center, space-around);
+
+                    & > .infor--items{
+                        margin: 0 8px;
+                        height: 32px;
+                        width: 32px;
+                        position: relative;
+                        cursor: pointer;
+
+                        & > .numInf{
+                            position: absolute;
+                            top: -5px;
+                            right: -5px;
+                            height: 18px;
+                            width: 18px;
+                            border-radius: 50%;
+                            line-height: 16px;
+                            text-align: center;
+                            color: $Text;
+                            background-color: $Button_2;
+                            @include styleText(12px, 400, 18px);
+                        }
+
+                        & > svg{
+                            height: 32px;
+                            width: 32px;
+                        }
+
+
+                        & > .dropDown{
+                            position: absolute;
+                            top: 48px;
+                            right: 0;
+                            padding: 18px 0px 10px 0px;
+                            border-radius: 4px;
+                            color: $Text;
+                            background-color: $Primary_1;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all ease .2s;
+                            
+
+                            & > .account--items{
+                                height: auto;
+                                width: 224px;
+                                margin-bottom: 13px;
+                                padding: 6px 12px 6px 20px;
+                                @include flexBox(center, normal);
+                                @include styleText(14px, 400, 24px);
+                                transition: all ease .15s;
+                                
+
+                                & > svg{
+                                    margin-right: 16px;
+                                }
+
+                                &:hover{
+                                    background-color: $Text_2;
+                                }
+                            }
+
+                            & > .prd--items{
+                                height: auto;
+                                width: 300px;
+                                margin-bottom: 20px;
+                                padding: 0 10px 0 20px;
+                                @include styleText(14px, 400, 24px);
+                                @include flexBox(center, space-between);
+
+                                & > img{
+                                    height: 32px;
+                                    width: 32px;
+                                }
+
+                                & > p{
+                                    padding-left: 10px;
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                }
+
+                                & > span{
+                                    height: 32px;
+                                    padding-left: 5px;
+                                    border-left: 1px solid $Text;
+                                    white-space: nowrap;
+                                    @include styleText(12px, 400, 32px);
+                                }
+
+                                & > .remove{
+                                    margin-left: 10px;
+
+                                    & > svg{
+                                        padding-top: 7px;
+
+                                    }
+                                    
+                                }
+
+                            }
+
+                        }
+
+                    
+                        &:hover .dropDown{
+                            top: 38px;
+                            opacity: 1;
+                            visibility: visible; 
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+}

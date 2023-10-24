@@ -1,0 +1,643 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  font-family: Poppins;
+}
+
+.header {
+  height: auto;
+  font-family: Poppins;
+}
+.header--top {
+  background-color: #000000;
+  color: #FAFAFA;
+}
+.header--top__content {
+  height: 100%;
+  position: relative;
+}
+.header--top__content > .title {
+  height: 100%;
+  width: 100%;
+  padding: 12px 0;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header--top__content > .title > span {
+  margin-left: 8px;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+}
+.header--top__content > .title > span > a {
+  color: unset;
+}
+.header--top__content > .language {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 999;
+  transform: translateY(-50%);
+}
+.header--top__content > .language > .language__english {
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  cursor: pointer;
+}
+.header--top__content > .language > .language__english > .language__vietnamese {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  padding: 10px 0;
+  border-radius: 4px;
+  background-color: #000000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.2s;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  cursor: pointer;
+}
+.header--top__content > .language > .language__english > .language__vietnamese > p {
+  padding: 8px 24px;
+  transition: all ease 0.2s;
+}
+.header--top__content > .language > .language__english > .language__vietnamese > p:hover {
+  background-color: #2F2E30;
+}
+.header--top__content > .language > .language__english:hover > .language__vietnamese {
+  top: 21px;
+  opacity: 1;
+  visibility: visible;
+}
+.header--middle {
+  background-color: #FFFFFF;
+  color: #000000;
+  border-bottom: 1px solid #000000;
+}
+.header--middle__content {
+  height: auto;
+  padding: 48px 0 16px 0;
+}
+.header--middle__content > .logo {
+  height: 24px;
+  width: auto;
+}
+.header--middle__content > .logo > img {
+  height: 100%;
+  width: fit-content;
+}
+.header--middle__content > .menu > ul {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.header--middle__content > .menu > ul > li {
+  list-style: none;
+  margin: 0 24px;
+  position: relative;
+}
+.header--middle__content > .menu > ul > li:hover::before {
+  bottom: 0;
+  opacity: 1;
+  visibility: visible;
+}
+.header--middle__content > .menu > ul > li::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.2s;
+}
+.header--middle__content > .menu > ul > li > a {
+  color: unset;
+  text-decoration: none;
+}
+.header--middle__content > .more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header--middle__content > .more > .search {
+  height: 38px;
+  padding: 7px 12px 7px 20px;
+  margin-right: 16px;
+  background-color: #F5F5F5;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+}
+.header--middle__content > .more > .search > input {
+  border: none;
+  outline: none;
+  margin-right: 34px;
+  color: #000000;
+  background-color: unset;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400px;
+  line-height: 18px;
+}
+.header--middle__content > .more > .search > button {
+  border: none;
+  outline: none;
+  height: 24px;
+  width: 24px;
+  padding: 0;
+  background-color: unset;
+  cursor: pointer;
+}
+.header--middle__content > .more > .more__infor {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header--middle__content > .more > .more__infor > .infor--items {
+  margin: 0 8px;
+  height: 32px;
+  width: 32px;
+  position: relative;
+  cursor: pointer;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .numInf {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  line-height: 16px;
+  text-align: center;
+  color: #FAFAFA;
+  background-color: #DB4444;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.header--middle__content > .more > .more__infor > .infor--items > svg {
+  height: 32px;
+  width: 32px;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .dropDown {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  padding: 18px 0px 10px 0px;
+  border-radius: 4px;
+  color: #FAFAFA;
+  background-color: #2F2E30;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 0.2s;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .dropDown > .account--items {
+  height: auto;
+  width: 224px;
+  margin-bottom: 13px;
+  padding: 6px 12px 6px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  transition: all ease 0.15s;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .dropDown > .account--items > svg {
+  margin-right: 16px;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .dropDown > .account--items:hover {
+  background-color: #000000;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .dropDown > .prd--items {
+  height: auto;
+  width: 300px;
+  margin-bottom: 20px;
+  padding: 0 10px 0 20px;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .dropDown > .prd--items > img {
+  height: 32px;
+  width: 32px;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .dropDown > .prd--items > p {
+  padding-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .dropDown > .prd--items > span {
+  height: 32px;
+  padding-left: 5px;
+  border-left: 1px solid #FAFAFA;
+  white-space: nowrap;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 32px;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .dropDown > .prd--items > .remove {
+  margin-left: 10px;
+}
+.header--middle__content > .more > .more__infor > .infor--items > .dropDown > .prd--items > .remove > svg {
+  padding-top: 7px;
+}
+.header--middle__content > .more > .more__infor > .infor--items:hover .dropDown {
+  top: 38px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.main {
+  font-family: Poppins;
+}
+.main__content--farme_1 {
+  height: auto;
+}
+.main__content--farme_1--nav {
+  padding-top: 40px;
+  border-right: 1px solid #000000;
+}
+.main__content--farme_1--nav > ul > li {
+  list-style: none;
+  margin-bottom: 16px;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.main__content--farme_1--nav > ul > li > a {
+  color: unset;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main__content--farme_1--nav > ul > li > a > span {
+  height: 24px;
+  width: 24px;
+}
+.main__content--farme_1--banner {
+  padding-top: 40px;
+  padding-left: 35px;
+}
+.main__content--farme_1--banner > img {
+  width: 100%;
+  height: 100%;
+}
+.main__content--salesToday, .main__content--category, .main__content--betsSell, .main__content--ourPrd, .main__content--banner-3 {
+  margin-top: 140px;
+  border-bottom: 1px solid #000000;
+}
+.main__content--salesToday > .title_1, .main__content--category > .title_1, .main__content--betsSell > .title_1, .main__content--ourPrd > .title_1, .main__content--banner-3 > .title_1 {
+  display: flex;
+  align-items: center;
+  justify-content: normal;
+}
+.main__content--salesToday > .title_1 > p, .main__content--category > .title_1 > p, .main__content--betsSell > .title_1 > p, .main__content--ourPrd > .title_1 > p, .main__content--banner-3 > .title_1 > p {
+  margin-left: 16px;
+  color: #DB4444;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+}
+.main__content--salesToday > .title_2, .main__content--category > .title_2, .main__content--betsSell > .title_2, .main__content--ourPrd > .title_2, .main__content--banner-3 > .title_2 {
+  margin-top: 24px;
+  position: relative;
+}
+.main__content--salesToday > .title_2 > h2, .main__content--category > .title_2 > h2, .main__content--betsSell > .title_2 > h2, .main__content--ourPrd > .title_2 > h2, .main__content--banner-3 > .title_2 > h2 {
+  font-family: Inter;
+  letter-spacing: 1.44px;
+  font-style: normal;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 48px;
+}
+.main__content--salesToday > .title_2 > .timeSales, .main__content--category > .title_2 > .timeSales, .main__content--betsSell > .title_2 > .timeSales, .main__content--ourPrd > .title_2 > .timeSales, .main__content--banner-3 > .title_2 > .timeSales {
+  display: flex;
+}
+.main__content--salesToday > .title_2 > .timeSales > .timeItems, .main__content--category > .title_2 > .timeSales > .timeItems, .main__content--betsSell > .title_2 > .timeSales > .timeItems, .main__content--ourPrd > .title_2 > .timeSales > .timeItems, .main__content--banner-3 > .title_2 > .timeSales > .timeItems {
+  margin: 0 38px 0 0;
+  text-align: center;
+}
+.main__content--salesToday > .title_2 > .timeSales > .timeItems > span, .main__content--category > .title_2 > .timeSales > .timeItems > span, .main__content--betsSell > .title_2 > .timeSales > .timeItems > span, .main__content--ourPrd > .title_2 > .timeSales > .timeItems > span, .main__content--banner-3 > .title_2 > .timeSales > .timeItems > span {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  padding-bottom: 4px;
+}
+.main__content--salesToday > .title_2 > .timeSales > .timeItems > p, .main__content--category > .title_2 > .timeSales > .timeItems > p, .main__content--betsSell > .title_2 > .timeSales > .timeItems > p, .main__content--ourPrd > .title_2 > .timeSales > .timeItems > p, .main__content--banner-3 > .title_2 > .timeSales > .timeItems > p {
+  height: 28px;
+  width: 46px;
+  font-family: Inter;
+  font-style: normal;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 30px;
+}
+.main__content--salesToday > .title_2 > .timeSales > .timeItems > .crick, .main__content--category > .title_2 > .timeSales > .timeItems > .crick, .main__content--betsSell > .title_2 > .timeSales > .timeItems > .crick, .main__content--ourPrd > .title_2 > .timeSales > .timeItems > .crick, .main__content--banner-3 > .title_2 > .timeSales > .timeItems > .crick {
+  display: block;
+}
+.main__content--salesToday > .title_2 > .direct, .main__content--category > .title_2 > .direct, .main__content--betsSell > .title_2 > .direct, .main__content--ourPrd > .title_2 > .direct, .main__content--banner-3 > .title_2 > .direct {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+}
+.main__content--salesToday > .title_2 > .direct > .direct-items, .main__content--category > .title_2 > .direct > .direct-items, .main__content--betsSell > .title_2 > .direct > .direct-items, .main__content--ourPrd > .title_2 > .direct > .direct-items, .main__content--banner-3 > .title_2 > .direct > .direct-items {
+  margin-left: 10px;
+  cursor: pointer;
+}
+.main__content--salesToday > .title_2 > .direct > .direct-items > .img, .main__content--category > .title_2 > .direct > .direct-items > .img, .main__content--betsSell > .title_2 > .direct > .direct-items > .img, .main__content--ourPrd > .title_2 > .direct > .direct-items > .img, .main__content--banner-3 > .title_2 > .direct > .direct-items > .img {
+  padding: 10px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background-color: #F5F5F5;
+  cursor: pointer;
+}
+.main__content--salesToday > .listPrd, .main__content--category > .listPrd, .main__content--betsSell > .listPrd, .main__content--ourPrd > .listPrd, .main__content--banner-3 > .listPrd {
+  height: 390px;
+  margin-top: 40px;
+  overflow: hidden;
+  position: relative;
+}
+.main__content--salesToday > .listPrd > .listItems, .main__content--category > .listPrd > .listItems, .main__content--betsSell > .listPrd > .listItems, .main__content--ourPrd > .listPrd > .listItems, .main__content--banner-3 > .listPrd > .listItems {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-wrap: nowrap;
+  flex-shrink: 1;
+  transition: 0.15s;
+}
+.main__content--salesToday > .listPrd > .listItems > .items, .main__content--category > .listPrd > .listItems > .items, .main__content--betsSell > .listPrd > .listItems > .items, .main__content--ourPrd > .listPrd > .listItems > .items, .main__content--banner-3 > .listPrd > .listItems > .items {
+  height: 350px;
+  margin-bottom: 40px;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .imgPrd, .main__content--category > .listPrd > .listItems > .items > .imgPrd, .main__content--betsSell > .listPrd > .listItems > .items > .imgPrd, .main__content--ourPrd > .listPrd > .listItems > .items > .imgPrd, .main__content--banner-3 > .listPrd > .listItems > .items > .imgPrd {
+  height: 250px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #F5F5F5;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .imgPrd > img, .main__content--category > .listPrd > .listItems > .items > .imgPrd > img, .main__content--betsSell > .listPrd > .listItems > .items > .imgPrd > img, .main__content--ourPrd > .listPrd > .listItems > .items > .imgPrd > img, .main__content--banner-3 > .listPrd > .listItems > .items > .imgPrd > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .imgPrd .sales, .main__content--category > .listPrd > .listItems > .items > .imgPrd .sales, .main__content--betsSell > .listPrd > .listItems > .items > .imgPrd .sales, .main__content--ourPrd > .listPrd > .listItems > .items > .imgPrd .sales, .main__content--banner-3 > .listPrd > .listItems > .items > .imgPrd .sales {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  border-radius: 4px;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  height: auto;
+  width: auto;
+  padding: 4px 12px;
+  margin: unset;
+  color: #FAFAFA;
+  background-color: #DB4444;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .imgPrd .more, .main__content--category > .listPrd > .listItems > .items > .imgPrd .more, .main__content--betsSell > .listPrd > .listItems > .items > .imgPrd .more, .main__content--ourPrd > .listPrd > .listItems > .items > .imgPrd .more, .main__content--banner-3 > .listPrd > .listItems > .items > .imgPrd .more {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .imgPrd .more > svg, .main__content--category > .listPrd > .listItems > .items > .imgPrd .more > svg, .main__content--betsSell > .listPrd > .listItems > .items > .imgPrd .more > svg, .main__content--ourPrd > .listPrd > .listItems > .items > .imgPrd .more > svg, .main__content--banner-3 > .listPrd > .listItems > .items > .imgPrd .more > svg {
+  height: 34px;
+  width: 34px;
+  padding: 5px;
+  margin-bottom: 8px;
+  border-radius: 50%;
+  background-color: #F5F5F5;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .imgPrd > .addCart, .main__content--category > .listPrd > .listItems > .items > .imgPrd > .addCart, .main__content--betsSell > .listPrd > .listItems > .items > .imgPrd > .addCart, .main__content--ourPrd > .listPrd > .listItems > .items > .imgPrd > .addCart, .main__content--banner-3 > .listPrd > .listItems > .items > .imgPrd > .addCart {
+  position: absolute;
+  bottom: -40px;
+  left: 0;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  padding: 8px 0;
+  color: #FAFAFA;
+  background-color: #000000;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  cursor: pointer;
+  transition: all ease-in 0.15s;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .inforPrd, .main__content--category > .listPrd > .listItems > .items > .inforPrd, .main__content--betsSell > .listPrd > .listItems > .items > .inforPrd, .main__content--ourPrd > .listPrd > .listItems > .items > .inforPrd, .main__content--banner-3 > .listPrd > .listItems > .items > .inforPrd {
+  margin-top: 16px;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .inforPrd > h4, .main__content--category > .listPrd > .listItems > .items > .inforPrd > h4, .main__content--betsSell > .listPrd > .listItems > .items > .inforPrd > h4, .main__content--ourPrd > .listPrd > .listItems > .items > .inforPrd > h4, .main__content--banner-3 > .listPrd > .listItems > .items > .inforPrd > h4 {
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .inforPrd > .price, .main__content--category > .listPrd > .listItems > .items > .inforPrd > .price, .main__content--betsSell > .listPrd > .listItems > .items > .inforPrd > .price, .main__content--ourPrd > .listPrd > .listItems > .items > .inforPrd > .price, .main__content--banner-3 > .listPrd > .listItems > .items > .inforPrd > .price {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .inforPrd > .price > p, .main__content--category > .listPrd > .listItems > .items > .inforPrd > .price > p, .main__content--betsSell > .listPrd > .listItems > .items > .inforPrd > .price > p, .main__content--ourPrd > .listPrd > .listItems > .items > .inforPrd > .price > p, .main__content--banner-3 > .listPrd > .listItems > .items > .inforPrd > .price > p {
+  color: #DB4444;
+  margin-right: 12px;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .inforPrd > .price > span, .main__content--category > .listPrd > .listItems > .items > .inforPrd > .price > span, .main__content--betsSell > .listPrd > .listItems > .items > .inforPrd > .price > span, .main__content--ourPrd > .listPrd > .listItems > .items > .inforPrd > .price > span, .main__content--banner-3 > .listPrd > .listItems > .items > .inforPrd > .price > span {
+  color: #2F2E30;
+  text-decoration: line-through;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .inforPrd > .starRate, .main__content--category > .listPrd > .listItems > .items > .inforPrd > .starRate, .main__content--betsSell > .listPrd > .listItems > .items > .inforPrd > .starRate, .main__content--ourPrd > .listPrd > .listItems > .items > .inforPrd > .starRate, .main__content--banner-3 > .listPrd > .listItems > .items > .inforPrd > .starRate {
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+}
+.main__content--salesToday > .listPrd > .listItems > .items > .inforPrd > .starRate > p, .main__content--category > .listPrd > .listItems > .items > .inforPrd > .starRate > p, .main__content--betsSell > .listPrd > .listItems > .items > .inforPrd > .starRate > p, .main__content--ourPrd > .listPrd > .listItems > .items > .inforPrd > .starRate > p, .main__content--banner-3 > .listPrd > .listItems > .items > .inforPrd > .starRate > p {
+  margin-left: 8px;
+  color: #2F2E30;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+}
+.main__content--salesToday > .listPrd > .listItems > .items:hover .addCart, .main__content--category > .listPrd > .listItems > .items:hover .addCart, .main__content--betsSell > .listPrd > .listItems > .items:hover .addCart, .main__content--ourPrd > .listPrd > .listItems > .items:hover .addCart, .main__content--banner-3 > .listPrd > .listItems > .items:hover .addCart {
+  bottom: 0;
+}
+.main__content--salesToday > .viewAll, .main__content--category > .viewAll, .main__content--betsSell > .viewAll, .main__content--ourPrd > .viewAll, .main__content--banner-3 > .viewAll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 60px 0;
+}
+.main__content--salesToday > .viewAll > button, .main__content--category > .viewAll > button, .main__content--betsSell > .viewAll > button, .main__content--ourPrd > .viewAll > button, .main__content--banner-3 > .viewAll > button {
+  height: auto;
+  width: auto;
+  margin: unset;
+  padding: 16px 48px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-family: Poppins;
+  line-height: 24px;
+  border: none;
+  border-radius: 4px;
+  color: #FAFAFA;
+  background-color: #DB4444;
+  cursor: pointer;
+}
+.main__content--category > .listCate > .listCate--Items {
+  margin-top: 60px;
+  margin-bottom: 70px;
+}
+.main__content--category > .listCate > .listCate--Items > .itemsCate > .itemsCateCont {
+  text-align: center;
+  padding: 25px 0;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  transition: all ease 0.15s;
+}
+.main__content--category > .listCate > .listCate--Items > .itemsCate > .itemsCateCont > p {
+  margin-top: 16px;
+}
+.main__content--category > .listCate > .listCate--Items > .itemsCate > .itemsCateCont:hover {
+  background-color: #DB4444;
+  color: #FAFAFA;
+  cursor: pointer;
+}
+.main__content--betsSell {
+  border-bottom: unset;
+}
+.main__content--betsSell .button {
+  height: auto;
+  width: auto;
+  margin: unset;
+  padding: 16px 48px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  font-family: Poppins;
+  line-height: 24px;
+  border: none;
+  border-radius: 4px;
+  color: #FAFAFA;
+  background-color: #DB4444;
+  cursor: pointer;
+}
+.main__content--banner-2 {
+  height: 500px;
+  width: 100%;
+  margin: 140px 0 70px 0;
+}
+.main__content--banner-2 > img {
+  height: 100%;
+  width: 100%;
+}
+.main__content--ourPrd {
+  border-bottom: unset;
+}
+.main__content--ourPrd > .listPrd {
+  height: 820px;
+}
+.main__content--ourPrd > .listPrd > .listItems {
+  flex-wrap: wrap;
+}
+.main__content--ourPrd > .listPrd > .listItems > .items {
+  margin-bottom: 60px;
+}
+.main__content--banner-3 {
+  border-bottom: none;
+}
+.main__content--banner-3 > .bannerCont {
+  height: 600px;
+  margin-top: 60px;
+}
+.main__content--banner-3 > .bannerCont > .bannerCont__left {
+  height: 100%;
+}
+.main__content--banner-3 > .bannerCont > .bannerCont__left > img {
+  height: 100%;
+  width: 100%;
+}
+.main__content--banner-3 > .bannerCont > .bannerCont__right {
+  height: 100%;
+}
+.main__content--banner-3 > .bannerCont > .bannerCont__right > .topBanner {
+  height: 50%;
+  width: 100%;
+}
+.main__content--banner-3 > .bannerCont > .bannerCont__right > .topBanner > img {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 16px;
+}
+.main__content--banner-3 > .bannerCont > .bannerCont__right > .bottomBanner {
+  height: 50%;
+}
+.main__content--banner-3 > .bannerCont > .bannerCont__right > .bottomBanner > .itembn {
+  height: 100%;
+}
+.main__content--banner-3 > .bannerCont > .bannerCont__right > .bottomBanner > .itembn > img {
+  height: 100%;
+  width: 100%;
+  padding-top: 16px;
+}
+
+/*# sourceMappingURL=style.css.map */

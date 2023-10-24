@@ -1,0 +1,25 @@
+$Primary: #FFFFFF;
+$Primary_1: #2F2E30;
+$Button: #000000;
+$Button_1: #00FF66;
+$Button_2: #DB4444;
+$Hover_Button: #E07575;
+$Secondary: #F5F5F5;
+$Secondary_2: #DB4444;
+$Text: #FAFAFA;
+$Text_2: #000000;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    font-family: Poppins;
+}
+
+@import 'library.scss';
+@import 'header.scss';
+@import 'main.scss';
